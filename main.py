@@ -10,10 +10,7 @@ fuente:
 """
 
 # Matriz Q o matriz de fibonacci
-Q = [
-        [1, 1],
-        [1, 0]
-    ]
+Q = [[1, 1], [1, 0]]
 
 
 def multiplicar_matriz(A, B):
@@ -37,7 +34,7 @@ def multiplicar_matriz(A, B):
             fila = []
             for columna in range(columnas_B):
                 fila.append(0)
-            result.append(fila) 
+            result.append(fila)
         """
         Realizamos la multiplicacion de las matrices A y B,
         iterando sobre las filas y columnas
@@ -48,6 +45,7 @@ def multiplicar_matriz(A, B):
                 for valor in range(len(B)):
                     result[fila][columna] += A[fila][valor] * B[columna][valor]
         return result
+
 
 def exponenciacion_binaria_matriz(matriz, n):
     """
@@ -63,6 +61,7 @@ def exponenciacion_binaria_matriz(matriz, n):
         n = n // 2
     return result
 
+
 def enesimo_valor_fibonacci(n):
     """
     Obtenemos el resultado final
@@ -72,6 +71,7 @@ def enesimo_valor_fibonacci(n):
     resultado_matriz = exponenciacion_binaria_matriz(Q, n - 1)
     # obtenemos el valor de F(n+1)
     return resultado_matriz[0][0]
+
 
 n = 6
 print(f"El {n}-ésimo número de Fibonacci es: {enesimo_valor_fibonacci(n)}")
